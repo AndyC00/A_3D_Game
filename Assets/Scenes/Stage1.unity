@@ -2959,6 +2959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79ad3f23eab3604d9af36aa8ea15fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomspeed: 5
 --- !u!1 &984408814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8358101648614693880, guid: 52b81639f4b0ece4799b58c50f85be23, type: 3}
@@ -4407,7 +4408,7 @@ GameObject:
   - component: {fileID: 1524087223}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
