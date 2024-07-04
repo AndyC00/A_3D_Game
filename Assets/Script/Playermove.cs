@@ -25,6 +25,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 if (hit.collider.tag == "Ground")
                 {
+                    playerAgent.stoppingDistance = 0;
                     playerAgent.SetDestination(hit.point);
                 }
                 else if (hit.collider.tag == "Interactable")
