@@ -18,11 +18,20 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
             RaycastHit hit;
             bool isCollide = Physics.Raycast(ray, out hit);
             if (isCollide)
             {
-                playerAgent.SetDestination(hit.point);
+                if (hit.collider.tag == "Ground")
+                {
+                    playerAgent.SetDestination(hit.point);
+                }
+                else if (hit.collider.tag == "Interactable")
+                {
+                    hit.collider.GetComponent<InteractableObject>().OnClick(playerAgent);
+                }
+                
             }
         }
     }
