@@ -1,1 +1,1 @@
-A 3D Game designed on Unity
+A 3D RPG Game based on Unity programming by C#
