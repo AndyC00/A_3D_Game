@@ -20,7 +20,7 @@ public class DialogueUI : MonoBehaviour
         contentText = transform.Find("ContentText").GetComponent<TextMeshProUGUI>();
         NextButton = transform.Find("NextButton").GetComponent<Button>();
         NextButton.onClick.AddListener(this.OnNextButtonClick);
-
+        Hide();
     }
     public void Show()
     { 
@@ -32,6 +32,7 @@ public class DialogueUI : MonoBehaviour
         contentList = new List<string>();
         contentList.AddRange(content);
         contentText.text = contentList[0];
+        gameObject.SetActive(true);
     }
     public void Hide() 
     {
