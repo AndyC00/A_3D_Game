@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
+    public static DialogueUI instance { get; private set;  };
+
     private TextMeshProUGUI nameText;
     private TextMeshProUGUI contentText;
     private Button NextButton;
 
-    public List<string> contentList;
+    private List<string> contentList;
     private int contentIndex = 0;
 
     private void Start()
