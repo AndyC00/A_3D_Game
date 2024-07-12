@@ -31,6 +31,7 @@ public class DialogueUI : MonoBehaviour
         nameText.text = name;
         contentList = new List<string>();
         contentList.AddRange(content);
+        contentIndex = 0;
         contentText.text = contentList[0];
         gameObject.SetActive(true);
     }
