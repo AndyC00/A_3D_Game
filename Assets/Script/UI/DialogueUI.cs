@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
-    public static DialogueUI instance { get; private set;  };
+    public static DialogueUI Instance { get; private set;  }
 
     private TextMeshProUGUI nameText;
     private TextMeshProUGUI contentText;
@@ -15,6 +15,17 @@ public class DialogueUI : MonoBehaviour
 
     private List<string> contentList;
     private int contentIndex = 0;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject); return;
+        }
+
+        Instance = this;
+    }
+
 
     private void Start()
     {
