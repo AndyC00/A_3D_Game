@@ -67,5 +67,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackValue: 20
-  bulletSpeed: 10
+  bulletSpeed: 30
   bulletPrefab: {fileID: 1540285743436290889, guid: 53f171e4894a0dc4fb03f421019d8ce1, type: 3}

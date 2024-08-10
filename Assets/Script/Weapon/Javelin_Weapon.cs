@@ -6,9 +6,31 @@ public class JavelinWeapon : Weapon
 {
     public float bulletSpeed;
     public GameObject bulletPrefab;
+    private GameObject bulletGo;
+
+    private void Start()
+    {
+        SpawnBullet();
+    }
+
     public override void Attack()
     {
-        GameObject bulletGo = GameObject.Instantiate(bulletPrefab, transform.position, transform.rotation);
-        bulletGo.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+        if (bulletGo != null)
+        {
+            bulletGo.transform.parent = null;
+            bulletGo.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+            bulletGo = null;
+            Invoke("SpawnBullet", 0.5f);
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void SpawnBullet()
+    {
+        bulletGo = GameObject.Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bulletGo.transform.parent = transform;
     }
 }
