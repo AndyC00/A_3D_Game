@@ -13,14 +13,14 @@ public class ScytheWeapon : Weapon
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        //Press "J" to attack
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Attack();
-        }
-    }
+    //private void Update()
+    //{
+    //    //Press "J" to attack
+    //    if (Input.GetKeyDown(KeyCode.J))
+    //    {
+    //        Attack();
+    //    }
+    //}
 
     public override void Attack()
     {
