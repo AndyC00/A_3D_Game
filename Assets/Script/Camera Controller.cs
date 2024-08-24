@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     //scrolling speed
-    public float zoomSpeed = 10f;       
-    public float rotationSpeed = 100f;  
+    public float zoomSpeed = 10f;
+    public float rotationSpeed = 100f;
 
     private Vector3 offset;
     private Transform playerTransform;
