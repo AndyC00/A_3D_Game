@@ -1,0 +1,3 @@
+Begin Object Class=/Script/Engine.SubsurfaceProfile Name="SSP_Yin_Head" ExportPath="/Script/Engine.SubsurfaceProfile'/Game/TemplarKnight/Materials/MasterMaterials/SSSProfile/SSP_Yin_Head.SSP_Yin_Head'"
+   Settings=(SurfaceAlbedo=(R=0.906040,G=0.695388,B=0.655946,A=1.000000),MeanFreePathColor=(R=0.353395,G=0.331056,B=0.326319,A=2.415245),MeanFreePathDistance=0.100000,WorldUnitScale=0.333333,bEnableBurley=True,bEnableMeanFreePath=True,Tint=(R=1.000000,G=0.671248,B=0.625000,A=1.000000),ScatterRadius=2.000000,SubsurfaceColor=(R=1.000000,G=0.671248,B=0.625000,A=1.000000),FalloffColor=(R=1.000000,G=0.767492,B=0.723958,A=1.000000),Roughness0=0.500000)
+End Object
