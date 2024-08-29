@@ -10,5 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f714969cc5292e94fb2e2a7d6d0a1118, type: 3}
-  m_Name: New Item SO
+  m_Name: Weapon_Scythe
   m_EditorClassIdentifier: 
+  id: 1
+  name: Scythe
+  itemType: 0
+  description: The Character's Scythe
+  propertyList:
+  - propertytype: 4
+    value: 20
+  icon: {fileID: 0}
+  prefab: {fileID: 8455001885985147095, guid: fde4f6aa744d8174b894977591bef63c, type: 3}

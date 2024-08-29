@@ -15,7 +15,7 @@ public class JavelinBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.collider.tag == Tag.PLAYER)
         {
             return;
         }
