@@ -1,3 +1,0 @@
-Begin Object Class=/Script/Engine.SubsurfaceProfile Name="SP_Head" ExportPath="/Script/Engine.SubsurfaceProfile'/Game/TemplarKnight/Materials/MasterMaterials/SSSProfile/SP_Head.SP_Head'"
-   Settings=(SurfaceAlbedo=(R=0.830540,G=0.432498,B=0.440760,A=1.000000),MeanFreePathColor=(R=0.164740,G=0.148244,B=0.148422,A=1.147241),MeanFreePathDistance=0.100000,WorldUnitScale=0.333333,bEnableBurley=True,bEnableMeanFreePath=True,ScatterRadius=0.950000,SubsurfaceColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),FalloffColor=(R=0.916667,G=0.477327,B=0.486446,A=1.000000),BoundaryColorBleed=(R=0.802083,G=0.681032,B=0.584852,A=1.000000),NormalScale=0.464667,IOR=1.470000,Roughness0=0.500000,Roughness1=1.114285,LobeMix=0.800000)
-End Object
