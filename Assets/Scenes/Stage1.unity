@@ -340,9 +340,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5246352643722088757, guid: 05d5fbd3f04b096428268a8ede81bec0, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: bf0d95bca6c43194db16f6288cbf9a18, type: 3}
+    - target: {fileID: 5246352643722088757, guid: 05d5fbd3f04b096428268a8ede81bec0, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 227c8e8422e89464a875d7ec6f6bdbbe, type: 2}
+      objectReference: {fileID: 9100000, guid: f9aa2f5057e77884ab906cfb3d492dbb, type: 2}
     - target: {fileID: 5246352643729293077, guid: 05d5fbd3f04b096428268a8ede81bec0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.364
