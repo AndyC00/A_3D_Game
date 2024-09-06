@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
     private Animator animator;
-    public bool isWalking;
-    private Transform playerTransform;
+    public bool isWalking; 
+    private NavMeshAgent navMeshAgent;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        animator.SetBool("isWalking", isWalking);
-
-        if (Vector3.Distance(transform.position, playerTransform.position) > 5f)
+        if (navMeshAgent.velocity.sqrMagnitude > 0.01f)
         {
             isWalking = true;
         }
@@ -27,5 +25,7 @@ public class EnemyController : MonoBehaviour
         {
             isWalking = false;
         }
+
+        animator.SetBool("isWalking", isWalking);
     }
 }
