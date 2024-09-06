@@ -63,13 +63,13 @@ public class Enemy : MonoBehaviour
         return transform.position + randomDir.normalized * Random.Range(2, 5);
     }
 
-    public void TakeDamage(int Damage)
+    public void TakeDamage(int damage)
     {
-        HP -= Damage;
+        HP -= damage;
         if (HP <= 0)
         {
             GetComponent<Collider>().enabled = false;
-            int count = Random.Range(0, 4);
+            int count = Random.Range(1, 4);
             for (int i = 0; i < count; i++)
             {
                 ItemSO item = ItemDBManager.Instance.GetRandomItem();
