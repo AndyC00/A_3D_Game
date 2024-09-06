@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -19,7 +20,9 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        transform.position = playerTransform.position + offset;
+        Vector3 targetPosition = playerTransform.position + new Vector3(0, 1.0f, 0); // 1.5f to adjust
+
+        transform.position = targetPosition + offset;
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         Camera.main.fieldOfView += scroll * zoomSpeed;
@@ -36,7 +39,7 @@ public class CameraController : MonoBehaviour
             // x axies
             offset = Quaternion.AngleAxis(rotateVertical, transform.right) * offset;
 
-            transform.LookAt(playerTransform.position);
+            transform.LookAt(targetPosition);
         }
     }
 }

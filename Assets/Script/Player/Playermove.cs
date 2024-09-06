@@ -32,7 +32,7 @@ public class NewBehaviourScript : MonoBehaviour
                 if (hit.collider.tag == "Ground")
                 {
                     playerAgent.isStopped = false;
-                    playerAgent.stoppingDistance = 0.2f;
+                    playerAgent.stoppingDistance = 0.4f;
                     playerAgent.updateRotation = true;
                     playerAgent.SetDestination(hit.point);
                 }
@@ -54,6 +54,11 @@ public class NewBehaviourScript : MonoBehaviour
         else if (playerAgent.velocity.sqrMagnitude > 0.01f)
         {
             animator.SetBool("isWalking", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            animator.SetTrigger("AttackTrigger");
         }
     }
 }
