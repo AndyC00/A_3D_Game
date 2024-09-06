@@ -5,6 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    //enemy profile:
+    public int HP = 100;
+
+
+    //State Machine:
     public enum EnemyState
     { 
         NormalState,
@@ -56,5 +61,30 @@ public class Enemy : MonoBehaviour
     {
         Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
         return transform.position + randomDir.normalized * Random.Range(2, 5);
+    }
+
+    public void TakeDamage(int Damage)
+    {
+        HP -= Damage;
+        if (HP <= 0)
+        {
+            GetComponent<Collider>().enabled = false;
+            int count = Random.Range(0, 4);
+            for (int i = 0; i < count; i++)
+            {
+                ItemSO item = ItemDBManager.Instance.GetRandomItem();
+                GameObject go = GameObject.Instantiate(item.prefab, transform.position, Quaternion.identity);
+                go.tag = Tag.INTERACTABLE;
+                Animator anim = go.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.enabled = false;
+                }
+                PickableObject po = go.AddComponent<PickableObject>();
+                po.itemSO = item;
+            }
+
+            Destroy(this.gameObject);
+        }
     }
 }
