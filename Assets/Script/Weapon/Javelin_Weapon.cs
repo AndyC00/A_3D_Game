@@ -18,7 +18,7 @@ public class JavelinWeapon : Weapon
         if (bulletGo != null)
         {
             bulletGo.transform.parent = null;
-            bulletGo.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+            bulletGo.GetComponent<Rigidbody>().linearVelocity = transform.forward * bulletSpeed;
             bulletGo = null;
             Invoke("SpawnBullet", 0.5f);
         }
